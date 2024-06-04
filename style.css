@@ -1,0 +1,623 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+:root{
+  --text-color:#7a7373;
+  --bg-color:#000000;
+  --second-bg-color:#2222f;
+  --main-color:#fb8507;
+  --other-color:#626666;
+
+  --h1-font:4.5rem;
+  --h2-font:2.5rem;
+  --p-font:1rem;
+}
+body{
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+header{
+  position: fixed;
+  width: 100%;
+  top:0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 16%;
+  background: transparent;
+  transition: all .30s ease;
+}
+
+.logo{
+    font-size: 36px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+span{
+    color:var(--main-color);
+}
+.navlist{
+    display: flex;
+    
+}
+.navlist a{
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--other-color);
+    margin-left: 40px;
+    transition: all .30s ease;
+    
+}
+.navlist a:hover{
+    color: var(--main-color);
+    text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var();
+}
+   
+/*============the=ID============*/
+#menu-icon{
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+.h-btn{
+    display: inline-block;
+    padding: 11px 26px;
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all  .30s ease;
+  
+}
+.h-btn:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--main-color);
+    transform: scale(1.1);
+
+}
+section{
+    padding: 110px 16% 90px;
+}
+/*===========my background image======================*/
+.otis{
+    height:60vh;
+    width: 100%;
+    background: url(./NewImages/headddblk.jpg);
+    transition-delay: 250ms;
+    background-position:top left;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+/*===========SECTION MAIN CONTENT CLASS IN HTML h4===================*/
+.main-content h4{
+    font-size: 1.6rem;
+}
+/*===========SECTION MAIN CONTENT CLASS IN HTML h1===================*/
+.main-content h1{
+    font-size: var(--h1-font);
+    font-weight: 900;
+    margin: 20 px 0px 20px;
+    line-height: 1.2;
+}
+/*===========SECTION MAIN CONTENT Paragraph IN HTML===================*/
+.main-content p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    width: 620px;
+    max-width: 100%;
+    color: var(--other-color);
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+/*=============skills level icons ==========*/
+ 
+
+
+/*===========Social media icons IN HTML===================*/
+.social-media{
+    margin-bottom: 15px;
+}
+
+/*===========social media links==========================*/
+.social-media i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 17px;
+    /*box-shadow: 0 0 20px;*/
+    cursor: pointer;
+    transition: all .30s ease;
+}
+.social-media i:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+/*=============HIRE ME and DOWNLOAD MY CV BUTTONS=====*/
+.bnt{
+    display: inline-block;
+    padding: 11px 20px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .15s ease;
+}
+.bnt:hover{
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+.bnt1{
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    margin-left: 15px;
+    transition: all .15s ease;
+    padding: 11px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--main-color);
+}
+.bnt1:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+header.sticky{
+    background: var(--bg-color);
+    box-shadow: 0 .1erm 1rem rgba(0, 0, 0, .2);
+    padding: 16px 16%;
+}
+
+.about{
+    background: var(--second-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+}
+
+/*-------------About picture-------------*/
+.about-img img{
+    width: 70%;
+    height: 430px;
+    max-width:  430px;
+    border-radius: 30%;
+    object-fit:cover;
+    border: 7px solid var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+.about-text h2{
+font-size: var(--h2-font);
+line-height: 1.1;
+margin-bottom: 20px;
+}
+.experience{
+    margin-bottom: 50px;
+}
+.experience p{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 42px;
+}
+.experience p{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    font-weight: 400;
+    margin-left: 8px;
+}
+.center-text{
+    text-align: center;
+}
+.center-text h2{
+    font-size: var(--h2-font);
+}
+
+/*==================================MY CERTIFICATES =====================================================*/
+
+.services-content{
+    width: 100%;
+    height: auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    align-items:center;
+    gap:2.3rem;
+    margin-top: 4.2rem;
+
+}
+
+
+
+.box img{
+    width: 400px; /* Adjust the width to the desired size */
+    height: auto; /* This maintains the aspect ratio */
+    border-color: #000000;
+    box-shadow:#383e3e;
+    
+    
+}
+
+.box{
+    padding: 80px 40px 66px;
+    background: #070707;
+    border-radius: 28px;
+    border: 1px soloid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: all .30s ease;
+    cursor: pointer;
+    color:#d3a708;/*color icons for my services and my certificates sections */
+}
+
+.box h3{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.box p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    color:#727979;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.box a{
+    display: inline-block;
+    font-size: 22px;
+    line-height: 1.273em;
+    font-weight: 700;
+    padding: 7px 0;
+    color: var(--text-color);
+    border-bottom: 2px solid #5d6c83;
+    transition: all .15s ease;
+}
+
+.box:hover{
+    background: var(--text-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--main-color);
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.03);
+}
+.box a:hover{
+    border-bottom: 2px solid var(--main-color);
+}
+
+/*=====================================MY PROJECTS  CSS=====================================================*/
+
+.center-tex h2{
+    text-align: center;
+    font-size: var(--h2-font);
+}
+.portfolio{
+    background: var(--second-bg-color);
+}
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+    align-items:center;
+    gap:2.3rem;
+    margin-top: 4.2rem;
+}
+
+.row img{
+    width:350px; 
+    height: auto; 
+    border-color: #000000;
+    box-shadow:#383e3e;
+    
+}
+.row {
+    background: #000000;
+    border-radius: 28px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    padding: 20px;
+    transition: all .10s ease;
+}
+.main-row{
+    display:grid;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.row h5{
+     font-size: 20px;
+     font-weight: 600;
+     color: var(--other-color);
+}
+.row i{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    font-size: 50px;
+    border-radius: 50%;
+    color: var(--text-color);
+    background: #060606;
+}
+.row h4{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+
+}
+.row:hover{
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px)scale(1.03);
+    cursor: pointer;
+    box-shadow:#383e3e;
+}
+
+/**======================================CONTACT FORM CSS==================================================*/
+.contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.2rem;
+}
+.contact-form form{
+    position: relative;
+    width: 600px;
+}
+form input,
+form textarea{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline:none;
+    box-shadow: 0 0 5px var(--main-color);
+    background: #0a0a0a;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+form input::placeholder,
+form textarea::placeholder{
+    color: var(--other-color);
+    font-size: 15px;
+}
+form .send-btn{
+    display: inline-block;
+    padding: 11px 26px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .15s ease;
+    width: 30%;
+}
+form .send-btn:hover{
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+    cursor: pointer;
+}
+.footer{
+    padding: 22px 16%;
+    background: var(--second-bg-color);
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap: 2rem;
+}
+.copyright p{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--other-color);
+}
+
+.scrollarrow {
+    position: fixed;
+    bottom: 20px; /* this will Adjust the distance from the bottom as needed */
+    right: 20px; /* this will Adjust the distance from the left as needed */
+  }
+  
+  .scroll-top {
+    display: block;
+    width: 40px; /* this will Adjust the width of the arrow container */
+    height: 40px; /* this willAdjust the height of the arrow container */
+    background-color: #ef9e09; /*  this is Background color of the arrow container */
+    border-radius: 50%; /* this will Make the arrow container circular */
+    text-align: center;
+    line-height: 40px; /* this will Center the arrow vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* this will Add a shadow for depth */
+  }
+  
+  .scroll-top i {
+    font-size: 24px; /* this Adjust the size of the arrow icon */
+    color: #080808; /* this is the  Color of the arrow icon */
+  }
+#msg{
+    color:#f2d30c;
+    margin-top: -10px;
+    display: block;
+}
+
+/*===========================================MEDIA QUERY==================================================*/
+
+@media screen and (max-width: 1380px){
+    .otis{
+        background-image: url('NewImages/777.jpg');
+        text-align: center;
+        height: 400px;
+        max-width: 400%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .main-content p{
+        margin-top: -1%;
+        font-size: 16px;
+        
+    }
+    header{
+        padding: 20px 8%;
+    }
+}
+
+header.sticky{
+    padding: 14px 8%;
+}
+
+section{
+    padding: 90px 8% 80px;
+}
+
+.footer{
+    padding: 18px 8%;
+}
+
+.logo{
+    font-size: 28px;
+}
+
+@media (max-width: 1380px){
+    header{
+        padding: 20px 5%;
+    }
+}
+
+header.sticky{
+    padding: 14px 5%;
+}
+
+section{
+    padding: 90px 5% 80px;
+}
+
+.footer{
+    padding: 18px 5%;
+}
+
+.otis{
+    height: 90vh;
+    background-position: center;
+}
+
+@media (max-width: 1290px){
+    .box{
+        padding: 40px 40px 46px;
+    }
+    .box img{
+        width:100%;
+        height:60px;
+    }
+    .box h3{
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 1240px){
+    .about{
+        grid-template-columns: 1fr;
+        gap:2rem;
+        text-align: center;
+    }
+    .about-img img{
+        width: 100%;
+        height: 300px;
+        max-width: 400px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 950px){
+    :root{
+        --h1-font:3.5rem;
+    }
+    .social-media{
+        margin-bottom: 20px;
+    }
+    #menu-icon{
+        display: block;
+        
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        transition: all .10s ease;
+        
+    }
+    .navlist a{
+        display: block;
+        padding: 17px;
+        font-size: 22px;
+    }
+    .navlist.active{
+        right: 0;
+        
+    }
+}
+
+@media (max-width: 680px){
+    .main-content p{
+        width: 100%;
+    }
+}
+
+@media (max-width: 470px){
+    :root{
+        --h1-font:3rem;
+        --h2-font:2rem;
+    }
+    .about-img img{
+        width: 100%;
+        height: 300px;
+        max-width: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+/*============================================SEND BUTTON MEDIA QUERY==================================================*/
+
+    form .send-btn{
+        width: 100%;
+        
+        
+    }
+/*============================================CERTIFICATES IMAGES MEDIA QUERY==================================================*/
+    .box img{
+        height: 100%;
+
+    }
+
+    .bnt1{
+        width: 100%;
+
+    }
+}
